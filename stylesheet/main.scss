@@ -24,6 +24,9 @@ $bold:700;
 $medium:500;
 $regular:400;
 
+// body{
+//     background-color: rgb(255, 19, 2);
+// }
 
 // style starts
 
@@ -287,14 +290,14 @@ header nav{
 // }
 
 
-gradient stripe css
+// gradient stripe css
 .gradient-strip{
-    position: fixed;
+    position: absolute;
     top: 7%;
     width: 100%;
     height: 12px;
     background: linear-gradient(90deg, rgba(1,233,255,1) 0%, rgba(255,0,0,1) 50%, rgba(5,46,96,1) 100%);
-    z-index: 10;
+    z-index: 2;
 }
 
 
@@ -445,7 +448,7 @@ gradient stripe css
         //----------- mobile responsive here
 
         @include tablet{
-            font-size: 1.4em;
+            font-size: 1.8em;
             text-transform: uppercase;
             font-weight: $medium;
             margin-top: 25px;
@@ -468,11 +471,13 @@ gradient stripe css
                margin-bottom: 30px;
                color: $comon;
                border-bottom: 2px solid $primary-color;
-               background-color: rgb(48, 48, 78);
+               border-radius: 50px;
+               background-color: $back-color;
                box-shadow: 6px 6px 10px black;
 
                @include mobile{
-                width: 410px;
+                width: 400px;
+                height: 150px;
                }
                
                &.row-1{
@@ -486,7 +491,10 @@ gradient stripe css
                        transition-delay: .2s;
                        transition-duration: 5s;
                     
-
+                    @include mobile{
+                        width: 65px;
+                        height: 65px;
+                    }
                     
                        
                        
@@ -499,7 +507,7 @@ gradient stripe css
             //-------------------- mobile responsive here   
               h3{
                 @include mobile{
-                    font-size: 18px;
+                    font-size: 15px;
                     text-transform: uppercase;
                 }
               }
@@ -535,4 +543,41 @@ gradient stripe css
             }
         }
     }
+
 }
+// footer section css here
+
+
+.footer-container{
+        width: 100%;
+        height: 70px;
+        margin-top: 40px;
+        background-color: $back-color;
+
+        @include mobile{
+            
+        }
+
+        .footer-contents{
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h6{
+            color: $comon;
+
+            @include mobile{
+                font-size: 12px;
+            }
+            }
+
+            .developer{
+
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }

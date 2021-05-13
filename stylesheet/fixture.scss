@@ -22,9 +22,9 @@
            text-align: center;
            align-items: center;
             justify-content:center;
+            background-color: rgb(48, 48, 78);
            margin-bottom: 30px;
            border-bottom: 2px solid $primary-color;
-           background-color: rgb(48, 48, 78);
             box-shadow: 6px 6px 10px black;
 
                @include mobile{

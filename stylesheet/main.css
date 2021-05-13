@@ -228,15 +228,14 @@ header nav .next-page a {
           transform: rotate(45deg) translate(-5px, -6px);
 }
 
-gradient stripe css
 .gradient-strip {
-  position: fixed;
+  position: absolute;
   top: 7%;
   width: 100%;
   height: 12px;
   background: -webkit-gradient(linear, left top, right top, from(#01e9ff), color-stop(50%, red), to(#052e60));
   background: linear-gradient(90deg, #01e9ff 0%, red 50%, #052e60 100%);
-  z-index: 10;
+  z-index: 2;
 }
 
 .upcoming-container {
@@ -342,7 +341,7 @@ gradient stripe css
 
 @media screen and (max-width: 768px) {
   .match-result-container h1 {
-    font-size: 1.4em;
+    font-size: 1.8em;
     text-transform: uppercase;
     font-weight: 500;
     margin-top: 25px;
@@ -381,14 +380,16 @@ gradient stripe css
   margin-bottom: 30px;
   color: white;
   border-bottom: 2px solid white;
-  background-color: #30304e;
+  border-radius: 50px;
+  background-color: #25254e;
   -webkit-box-shadow: 6px 6px 10px black;
           box-shadow: 6px 6px 10px black;
 }
 
 @media screen and (max-width: 667px) {
   .match-result-container .match-container .match-details .r {
-    width: 410px;
+    width: 400px;
+    height: 150px;
   }
 }
 
@@ -411,8 +412,15 @@ gradient stripe css
 }
 
 @media screen and (max-width: 667px) {
+  .match-result-container .match-container .match-details .r .logo img {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media screen and (max-width: 667px) {
   .match-result-container .match-container .match-details .r h3 {
-    font-size: 18px;
+    font-size: 15px;
     text-transform: uppercase;
   }
 }
@@ -449,5 +457,43 @@ gradient stripe css
   text-align: center;
   font-size: 34px;
   margin: 0 20px;
+}
+
+.footer-container {
+  width: 100%;
+  height: 70px;
+  margin-top: 40px;
+  background-color: #25254e;
+}
+
+.footer-container .footer-contents {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-container .footer-contents h6 {
+  color: white;
+}
+
+@media screen and (max-width: 667px) {
+  .footer-container .footer-contents h6 {
+    font-size: 12px;
+  }
+}
+
+.footer-container .footer-contents .developer a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
