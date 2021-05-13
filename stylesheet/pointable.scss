@@ -1,0 +1,105 @@
+@import 'font-fam';
+@import 'colors';
+
+*{
+    margin: 0;
+	border: 0;
+	padding: 0;
+	color: black;
+}
+
+html{
+  background-color: #fff;
+  font-family: $secondary-fond;
+}
+
+header {
+	nav{
+		.nav-links{
+			li{
+				a{
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+.ptable table{
+	margin: 30px auto;
+	border-collapse: collapse;
+	background-color: $back-color
+}
+
+.ptable{
+	margin: 100px 0% 30px 0%;
+	
+}
+
+th, td {
+    padding: 10px;
+}
+
+th{
+	background-color: black;
+	color: white;
+}
+
+.headin{
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	margin: 30px;
+	display: block;
+    text-transform: uppercase;
+	font-family: $secondary-fond;
+}
+
+.wpos{
+	text-align: center;
+}
+
+.wpos td{
+	color: $comon;
+
+	&.divider{
+		border-bottom: 3px solid green;
+	}
+}
+
+.pos{
+	text-align: center;
+}
+
+.pos td{
+	color: #ff0000;
+}
+
+table .col{
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.wpos:hover{
+	background-color: #555555;
+}
+
+.wpos:hover td{
+	color: #fff;
+}
+
+.pos:hover{
+	background-color: #555555;
+}
+
+.pos:hover td{
+	color: #fff;
+}
+header{
+	nav{
+		.nav-links{
+			a{
+				font-size: 13px;
+			}
+		}
+	}
+}

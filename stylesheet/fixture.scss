@@ -1,0 +1,64 @@
+@import 'responsive';
+@import 'font-fam';
+@import 'colors';
+// variables
+
+.fixture-container{
+    margin-top: 80px;
+
+    *{
+        font-family: $secondary-fond;
+        color: $comon;
+    }
+    .fixture-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .r{
+            width: 500px;
+            height: 200px;
+           display: flex;
+           text-align: center;
+           align-items: center;
+            justify-content:center;
+           margin-bottom: 30px;
+           border-bottom: 2px solid $primary-color;
+           background-color: rgb(48, 48, 78);
+            box-shadow: 6px 6px 10px black;
+
+               @include mobile{
+                width: 410px;
+               }
+           &.row-1{
+               margin-top: 20px;
+           }
+           .logo{
+               img{
+                   width: 80px;
+
+                   //------------- tablet responsive here
+
+                //    @include tablet{
+                       
+                //    }
+
+               }
+           }
+
+            //-------------------- mobile responsive here   
+            h3{
+                @include mobile{
+                    font-size: 18px;
+                    text-transform: uppercase;
+                }
+              }
+        }
+
+        .vs{
+            display: flex;
+            align-items: center;
+           margin: 0 30px;
+        }
+    }
+}

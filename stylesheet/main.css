@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+header nav {
+  height: 3.7rem;
+  width: 100vw;
+  background-color: #131418;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+header nav .next-page {
+  display: none;
+  position: absolute;
+  right: 16%;
+  top: 30%;
+}
+
+header nav .next-page a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 667px) {
+  header nav .next-page {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav .next-page {
+    display: block;
+  }
+}
+
+/*Styling logo*/
+.logo {
+  padding: 1vh 1vw;
+  text-align: center;
+}
+
+.logo h1 {
+  color: white;
+  font-family: "Bebas Neue", cursive;
+}
+
+@media screen and (max-width: 768px) {
+  .logo h1 {
+    font-size: 36px;
+    margin-left: 16px;
+  }
+}
+
+.logo img {
+  height: 5rem;
+  width: 5rem;
+}
+
+/*Styling Links*/
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 88vw;
+  padding: 0 0.7vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  margin: 0 0.7vw;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  color: white;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+/*Styling Buttons*/
+.login-button {
+  background-color: transparent;
+  border: 1.5px solid #f2f5f7;
+  border-radius: 2em;
+  padding: 0.4rem 0.6rem;
+  margin-left: 2vw;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  color: white;
+  background-color: #e90a0a;
+  border: 1.5px solid transparent;
+  -webkit-transition: all ease-in-out 350ms;
+  transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #f2f5f7;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px) {
+  header nav {
+    position: fixed;
+    z-index: 3;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    z-index: 2;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+  }
+  .nav-links {
+    position: fixed;
+    background: #131418;
+    height: 100vh;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li:nth-child(1) {
+    -webkit-transition: all 0.5s ease 0.2s;
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    -webkit-transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    -webkit-transition: all 0.5s ease 0.6s;
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    -webkit-transition: all 0.5s ease 0.7s;
+    transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5) {
+    -webkit-transition: all 0.5s ease 0.8s;
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(6) {
+    -webkit-transition: all 0.5s ease 0.9s;
+    transition: all 0.5s ease 0.9s;
+    margin: 0;
+  }
+  .nav-links li:nth-child(7) {
+    -webkit-transition: all 0.5s ease 1s;
+    transition: all 0.5s ease 1s;
+    margin: 0;
+  }
+  li.fade {
+    opacity: 1;
+  }
+}
+
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  width: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+gradient stripe css
+.gradient-strip {
+  position: fixed;
+  top: 7%;
+  width: 100%;
+  height: 12px;
+  background: -webkit-gradient(linear, left top, right top, from(#01e9ff), color-stop(50%, red), to(#052e60));
+  background: linear-gradient(90deg, #01e9ff 0%, red 50%, #052e60 100%);
+  z-index: 10;
+}
+
+.upcoming-container {
+  padding-top: 30px;
+  height: 220px;
+  background-color: black;
+  border-bottom: 2px solid white;
+  z-index: 1;
+}
+
+.upcoming-container .banner-sec {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: auto;
+  margin-top: 29px;
+  -webkit-box-shadow: 5px 5px 8px;
+          box-shadow: 5px 5px 8px;
+}
+
+@media screen and (max-width: 667px) {
+  .upcoming-container .banner-sec {
+    display: block;
+  }
+}
+
+.upcoming-container .upcoming-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-top: 60px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .upcoming-container .upcoming-details {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .upcoming-container .upcoming-details {
+    margin-top: 70px;
+  }
+}
+
+.upcoming-container .upcoming-details * {
+  color: white;
+}
+
+@media screen and (max-width: 667px) {
+  .upcoming-container .upcoming-details * h2 {
+    font-size: 16px;
+    max-width: 100px;
+  }
+}
+
+.upcoming-container .upcoming-details * h3 {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .upcoming-container .upcoming-details * h3 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .upcoming-container .upcoming-details * h3 {
+    font-size: 12px;
+    margin-top: 6px;
+    max-width: 150px;
+  }
+}
+
+.upcoming-container .upcoming-details img {
+  width: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .upcoming-container .upcoming-details img {
+    width: 68px;
+  }
+}
+
+.match-result-container {
+  margin-top: 60px;
+}
+
+.match-result-container h1 {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .match-result-container h1 {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 25px;
+  }
+}
+
+.match-result-container .match-container .match-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.match-result-container .match-container .match-details .r {
+  width: 500px;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  border-bottom: 2px solid white;
+  background-color: #30304e;
+  -webkit-box-shadow: 6px 6px 10px black;
+          box-shadow: 6px 6px 10px black;
+}
+
+@media screen and (max-width: 667px) {
+  .match-result-container .match-container .match-details .r {
+    width: 410px;
+  }
+}
+
+.match-result-container .match-container .match-details .r.row-1 {
+  margin-top: 20px;
+}
+
+.match-result-container .match-container .match-details .r .logo img {
+  width: 80px;
+  -webkit-transition: -webkit-transform ease 2s;
+  transition: -webkit-transform ease 2s;
+  transition: transform ease 2s;
+  transition: transform ease 2s, -webkit-transform ease 2s;
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+  -webkit-transition-duration: 5s;
+          transition-duration: 5s;
+}
+
+@media screen and (max-width: 667px) {
+  .match-result-container .match-container .match-details .r h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.match-result-container .match-container .match-details .vs {
+  font-size: 22px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 30px;
+}
+
+@media screen and (max-width: 667px) {
+  .match-result-container .match-container .match-details .vs .bar-vs {
+    height: 55px;
+    text-align: center;
+  }
+}
+
+.match-result-container .match-container .match-details .vs h1 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.match-result-container .match-container .match-details .vs .goal-score {
+  text-align: center;
+  font-size: 34px;
+  margin: 0 20px;
+}
+/*# sourceMappingURL=main.css.map */

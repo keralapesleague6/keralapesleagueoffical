@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAA;EACG,KAAK,EAAE,KAAK;CACf;;AACD,AACG,OADI,CACJ,EAAE,CAAA;EACE,YAAY,EAAE,GAAG;EACjB,gBAAgB,EAAE,KAAK;CAC1B",
+    "sources": [
+        "bestteam.scss"
+    ],
+    "names": [],
+    "file": "bestteam.css"
+}
